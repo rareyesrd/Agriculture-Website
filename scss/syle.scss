@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500|Ubuntu&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Ubuntu', sans-serif;
 
+}
 // Navegation bar
 @import 'menu';
 
+@import 'main';
 // Responsive-gallery
 @import 'gallery';
+
+
+@import 'form';

@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-$primary-color: rgba(226, 226, 226);
-$nav-color: #5D4954;
+
+$primary-color: rgb(124, 209, 90);
+$nav-color: #f2f2f2;
+$bg-nav: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 body{
-    @media screen and (max-width:768px){
-        overflow-x: hidden;
-    }
+    overflow-x: hidden;
 }
 nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999999999;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,6 +24,21 @@ nav{
         font-size: 20px;
 
     }
+    .redes{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            li{
+                a{
+                    img{
+                        width: 20px;
+                    }
+                }
+                margin-right: 5px;
+            }
+        }
+    }
     .nav-links{
         list-style: none;
         display: flex;
@@ -27,50 +46,45 @@ nav{
         width: 35%;
         li{
             a{
-                color: #fff;
-                font-weight: bold;
+                // color: #000;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 400;
                 font-size: 14px;
                 letter-spacing: 3px;
-                color: $primary-color;
+                color: #000;
                 text-decoration: none;
             }
-            @media screen and (max-width:768px){
-                opacity: 0;
-            }
+                opacity: 0; 
         }
         @media screen and (max-width:1024px){
-            width: 60%;
+            width: 50%;
         }
-        @media screen and (max-width:768px){
+        // @media screen and (max-width:768px){
             position: absolute;
             right: 0;
             height: 92vh;
             top: 8vh;
-            background-color: $nav-color;
+            background-color: #f2f2f2;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 50%;
+            width: 30%;
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
+            z-index: 999;
         }
-        z-index: 1;
 
-    }
+    
     .nav-active{
         transform: translateX(0%);
     }
     .burger{
-        display: none;
         div{
             width: 25px;
             height: 3px;
             margin: 3px;
             background-color: $primary-color;
             transition: all .3s ease-in-out;
-        }
-        @media screen and (max-width:768px){
-            display: block;
             cursor: pointer;
         }
     }   
